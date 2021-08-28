@@ -1,16 +1,15 @@
+import java.util.HashMap;
 
 public class ATM {
-	private String accountID;
-	private float balance;
+	private HashMap<String, Float> accounts;
 	
 
-	public ATM(String accountID, float balance) {
+	public ATM(HashMap<String, Float> accounts) {
 		super();
-		this.accountID = accountID;
-		this.balance = balance;
+		this.accounts = accounts;
 	}
 	
-	public void deposit (int deposit) {
+	public void deposit (String accountID, float deposit) {
 		balance += deposit;
 	}
 }
