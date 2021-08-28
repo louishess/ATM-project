@@ -1,6 +1,6 @@
 import java.util.*;
 public class ATMTester {
-	public static void main (String [] args) {
+	public static void main (String [] args) throws Exception {
 		Scanner keyboard = new Scanner(System.in);
 		ATM banknoises = new ATM();
 		System.out.print ("Deposit something. Anything. Please.");

@@ -1,5 +1,4 @@
 import java.util.HashMap;
-
 public class ATM {
 	private HashMap<String, Float> accounts;
 	
@@ -8,7 +7,10 @@ public class ATM {
 		accounts = new HashMap<String, Float>();
 	}
 	
-	public void deposit (String accountID, float deposit) {
+	public void deposit (String accountID, float deposit) throws Exception {
+		if (deposit < 0) {
+			throw new IllegalArgumentException("oh. bet you think you're real clever, don't you. 'oh, it doesn't have a withdraw function, ill just deposit a negative number and it'll spit money to me. heheheeheheh!' cute. really. cute. not today buddy. you're allowed to give me money. get outta here with these negative numbers.");
+		}
 		if (accounts.containsKey(accountID)) {
 			accounts.replace(accountID, accounts.get(accountID) + deposit);
 		}
