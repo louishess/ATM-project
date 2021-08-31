@@ -26,4 +26,12 @@ public class ATM {
 	public void setAccounts(HashMap<String, Float> accounts) {
 		this.accounts = accounts;
 	}
+	public void withdraw (String accountID, float withdraw) {
+		if (withdraw > accounts.get(accountID)) {
+			System.out.println ("You do not have sufficient funds to make this withdrawal");
+		}
+		else {
+			accounts.replace(accountID, accounts.get(accountID), accounts.get(accountID) - withdraw);
+		}
+	}
 }
