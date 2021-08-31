@@ -34,4 +34,10 @@ public class ATM {
 			accounts.replace(accountID, accounts.get(accountID), accounts.get(accountID) - withdraw);
 		}
 	}
+	public Float checkBalance (String accountID) {
+		if(!accountID.equals(accounts.keySet())) {
+			throw new IllegalArgumentException ("Account does not exist");
+		}
+		return accounts.get(accountID);
+	}
 }
